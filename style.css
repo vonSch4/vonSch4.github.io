@@ -115,7 +115,7 @@ a {
     background-image: url('pictures/call.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 16px 20px;
+    background-size: 18px 18px;
 }
 
 @media (min-width: 768px) {
@@ -128,7 +128,7 @@ a {
     background-image: url('pictures/chat.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 16px 20px;
+    background-size: 20px 20px;
 }
 
 @media (min-width: 768px) {
@@ -141,7 +141,7 @@ a {
     background-image: url('pictures/profile.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 16px 20px;
+    background-size: 20px 18px;
 }
 
 
@@ -286,20 +286,45 @@ a {
     height: auto;
 }
 
+@media (min-width: 768px) {
+    .main-section__wrapper {
+        display: flex;
+    }
+
+    .main-section__img {
+        border-radius: 6px;
+        max-width: 360px;
+        margin-right: 25px;
+    }
+
+    .main-section__wrapper-text {
+        margin-right: 48px;
+    }
+
+    .main-section__section-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
 
 /*Кнопка read-more*/
 
-.main-section-more-btn {
-    width: 125px;
-    text-align: end;
+.main-section__more-btn {
+    display: flex;
+    width: 132px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: inherit;
     margin-left: 16px;
     margin-bottom: 16px;
     font-size: 16px;
     font-weight: 500;
-    background-color: #F8F8F8;
-    background-image: url(/pictures/read_more.svg);
-    background-repeat: no-repeat;
-    background-size: 10px 10px;
-    background-position-x: 0;
-    background-position-y: center;
+
+}
+
+.main-section__btn-img {
+    width: 8px;
+    height: 10px;
+    background-color: inherit;
 }
