@@ -301,6 +301,7 @@ a {
     .main-section__img {
         border-radius: 6px;
         max-width: 360px;
+        height: 208px;
         margin-right: 25px;
     }
 
@@ -308,9 +309,22 @@ a {
         margin-right: 48px;
     }
 
+    .main-section__p-text {
+        height: 160px;
+        overflow-y: hidden;
+    }
+
+    .main-section__more-btn {
+        margin-top: 10px;
+    }
+
     .main-section__section-text {
         font-size: 14px;
         line-height: 20px;
+    }
+
+    .main-section__section-text:nth-child(2) {
+        display: block;
     }
 }
 
