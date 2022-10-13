@@ -17,7 +17,6 @@ html {
 
 body {
     min-width: 320px;
-    max-width: 768px;
     overflow-x: hidden;
 }
 
@@ -37,7 +36,13 @@ a {
 }
 
 .header-container--position {
-    padding: 0 16px;
+    padding: 0 16px 0 14px;
+}
+
+@media (min-width: 768px) {
+    .header-container--position {
+        padding: 0 16px 0 14px;
+    }
 }
 
 
@@ -46,6 +51,21 @@ a {
 .menu-1, .menu-2, .logo__link {
     display: flex;
     align-items: center;
+}
+
+@media (min-width: 768px) {
+    .menu-3 {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-3--position {
+        margin-right: 42px;
+    }
+}
+
+@media (min-width: 1120px) {
+    
 }
 
 
@@ -70,6 +90,12 @@ a {
     margin-right: 17px;
 }
 
+@media (min-width: 768px) {
+    .menu-1__btn-menu {
+        margin-right: 42px;
+    }
+}
+
 .menu-2__btn-repair {
     background-image: url('pictures/repair.svg');
     background-position: center;
@@ -85,6 +111,39 @@ a {
     margin-left: 16px;
 }
 
+.menu-3__btn-call {
+    background-image: url('pictures/call.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px 20px;
+}
+
+@media (min-width: 768px) {
+    .menu-3__btn-call {
+        margin-right: 16px;
+    }
+}
+
+.menu-3__btn-chat {
+    background-image: url('pictures/chat.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px 20px;
+}
+
+@media (min-width: 768px) {
+    .menu-3__btn-chat {
+        margin-right: 16px;
+    }
+}
+
+.menu-3__btn-profile {
+    background-image: url('pictures/profile.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px 20px;
+}
+
 
 /*Лого*/
 
@@ -97,15 +156,41 @@ a {
     height: 51px;
 }
 
-.menu-1__btn-menu::before {
+.header-container--position::before {
     content: '';
     display: inline-block;
     position: relative;
-    left: 150px;
+    left: 172px;
     width: 2px;
-    height: 40px;
+    height: 32px;
     background-color: #EAEAEA;
     border-radius: 1px;
+}
+
+@media (min-width: 768px) {
+    .header-container--position::before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        left: 62px;
+        width: 2px;
+        height: 32px;
+        background-color: #EAEAEA;
+        border-radius: 1px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-container--position::after {
+        content: '';
+        display: inline-block;
+        position: relative;
+        right: 118px;
+        width: 2px;
+        height: 32px;
+        background-color: #EAEAEA;
+        border-radius: 1px;
+    }
 }
 
 
