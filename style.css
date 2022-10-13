@@ -1,3 +1,5 @@
+/*Общие стили/обнуление отступов итп*/
+
 *, *::after, *::before {
     font-family: 'TT Lakes';
     font-size: 14px;
@@ -15,6 +17,7 @@ html {
 
 body {
     min-width: 320px;
+    max-width: 768px;
     overflow-x: hidden;
 }
 
@@ -22,17 +25,23 @@ a {
     text-decoration: none;
 }
 
+
+/*Header*/
+
 .header-container {
     min-height: 88px;
     border-bottom: 1px solid #D9FFF5;
     background-color: #FFFFFF;
-    padding: 0 16px;
     display: flex;
     align-items: center;
 }
 
-/*Header*/
-/*Центрирование блоков в header*/
+.header-container--position {
+    padding: 0 16px;
+}
+
+
+/*Центрирование блоков внутри блоков меню в header*/
 
 .menu-1, .menu-2, .logo__link {
     display: flex;
@@ -42,17 +51,14 @@ a {
 
 /* Кнопки */
 
-.header__btn {
+.header-btn {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: #FF3E79;
 }
 
-.header__btn:hover {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+.header-btn:hover {
     background-color: #5b0284;
 }
 
@@ -82,7 +88,7 @@ a {
 
 /*Лого*/
 
-.logo {
+.logo--position {
     margin-right: auto;
 }
 
@@ -91,20 +97,39 @@ a {
     height: 51px;
 }
 
+.menu-1__btn-menu::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    left: 150px;
+    width: 2px;
+    height: 40px;
+    background-color: #EAEAEA;
+    border-radius: 1px;
+}
+
 
 /*Main*/
 
 .main-container {
     background-color: #F8F8F8;
+}
+
+.main-container--position {
     padding-top: 24px;
 }
 
+
+/*Заголовок в Main*/
+
 .main-container__title {
-    padding-left: 16px;
     font-size: 28px;
     line-height: 40px;
     font-weight: bold;
-    
+}
+
+.main-container__title--position {
+    padding-left: 16px;
 }
 
 .main-container__title::before {
@@ -123,10 +148,13 @@ a {
 /*Слайдер*/
 
 .slide-menu {
-    margin-top: 24px;
-    margin-left: 16px;
     display: flex;
     overflow-x: auto;
+}
+
+.slide-menu--position {
+    margin-top: 24px;
+    margin-left: 16px;
 }
 
 .slide-menu__item {
@@ -166,6 +194,11 @@ a {
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.2px;
+}
+
+.main-section__img {
+    width: 100%;
+    height: auto;
 }
 
 
