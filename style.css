@@ -274,6 +274,12 @@ a {
     flex-direction: column;
 }
 
+.main-section__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .main-section__section-text {
     padding-bottom: 16px;
     font-size: 14px;
@@ -282,13 +288,14 @@ a {
 }
 
 .main-section__img {
-    width: 100%;
+    max-width: 400px;
     height: auto;
 }
 
 @media (min-width: 768px) {
     .main-section__wrapper {
         display: flex;
+        flex-wrap: nowrap;
     }
 
     .main-section__img {
