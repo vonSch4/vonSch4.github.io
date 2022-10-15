@@ -11,7 +11,7 @@
 <body>
     <header class="header">
         <div class="header-container header-container--position">
-            <nav class="menu-1 menu-1__position">
+            <nav class="menu-1 menu-1--header-position">
                 <button class="header-btn menu-1__btn-menu" type="button"></button>
             </nav>
             <div class="logo logo--position">
@@ -24,7 +24,7 @@
                 <button class="header-btn menu-3__btn-chat" type="button"></button>
                 <button class="header-btn menu-3__btn-profile" type="button"></button>
             </nav>
-            <nav class="menu-2 menu-2--position">
+            <nav class="menu-2 menu-2--header-position">
                 <button class="header-btn menu-2__btn-repair" type="button"></button>
                 <button class="header-btn menu-2__btn-checkstatus" type="button"></button>
             </nav>
@@ -32,9 +32,22 @@
     </header>
     <main class="main">
         <div class="main-container main-container--position">
-            <h1 class="main-container__title main-container__title--position">
-                Услуги и сервисы
-            </h1>
+            <div class="main-header-wrapper">
+                <h1 class="main-container__title main-container__title--position">
+                    Услуги и сервисы
+                </h1>
+                <nav class="menu-2 menu-2--main-position" hidden>
+                    <label class="label-menu-2" hidden>
+                        <span class="header-btn__text">Оставить заявку</span>
+                        <button class="header-btn menu-2__btn-repair" type="button"></button>
+                    </label>
+                    <label class="label-menu-2" hidden>
+                        <span class="header-btn__text">Статус ремонта</span>
+                        <button class="header-btn menu-2__btn-checkstatus" type="button"></button>
+                    </label>
+                    
+                </nav>
+            </div>
             <ul class="slide-menu slide-menu--position">
                 <li class="slide-menu__item"><a class="slide-menu__link slide-menu__item--active" href="#">Ремонтируемые бренды</a></li>
                 <li class="slide-menu__item"><a class="slide-menu__link" href="#">Дополнительные услуги</a></li>
