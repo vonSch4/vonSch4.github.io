@@ -209,6 +209,12 @@ a {
     padding-top: 24px;
 }
 
+@media (min-width: 1120px) {
+    .main-container--position {
+        padding-top: 42px;
+    }
+}
+
 
 /*Заголовок в Main*/
 
@@ -220,6 +226,18 @@ a {
 
 .main-container__title--position {
     padding-left: 16px;
+}
+
+@media (min-width: 768px) {
+    .main-container__title--position {
+        padding-left: 24px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .main-container__title--position {
+        padding-left: 32px;
+    }
 }
 
 .main-container__title::before {
@@ -260,6 +278,7 @@ a {
     .header-btn__text {
         margin-right: 8px;
         font-size: 16px;
+        font-weight: 500;
     }
 
     .menu-2__btn-repair {
@@ -305,6 +324,25 @@ a {
 .slide-menu__item--active {
     border: 2px solid #41F6D7;
     background-color: #FFF;
+}
+
+@media (min-width: 768px) {
+    .slide-menu--position {
+        margin-left: 24px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .slide-menu--position {
+        font-size: 16px;
+        margin-left: 32px;
+        margin-right: 25px;
+        flex-wrap: wrap;
+    }
+    
+    .slide-menu__link {
+        padding: 8px 21px 7px 23px;
+    }
 }
 
 
@@ -368,6 +406,21 @@ a {
 
     .main-section__section-text:nth-child(2) {
         display: block;
+    }
+}
+
+@media (min-width: 1120px) {
+    .main-section__p-text {
+        margin-top: 16px;
+    }
+
+    .main-section__img {
+        max-width: 535px;
+        height: 307px;
+    }
+
+    .main-section__wrapper-text {
+        margin-left: 34px;
     }
 }
 
