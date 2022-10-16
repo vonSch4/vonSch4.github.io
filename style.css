@@ -41,7 +41,7 @@ a {
 
 @media (min-width: 768px) {
     .header-container--position {
-        padding: 0 16px 0 14px;
+        padding: 0 16px 0 16px;
     }
 }
 
@@ -69,9 +69,6 @@ a {
         margin-right: 42px;
     }
 }
-
-
-
 
 
 /* Кнопки в меню header */
@@ -226,6 +223,7 @@ a {
 
 .main-container__title--position {
     padding-left: 16px;
+    letter-spacing: -0.6px;
 }
 
 @media (min-width: 768px) {
@@ -337,6 +335,7 @@ a {
         font-size: 16px;
         margin-left: 32px;
         margin-right: 25px;
+        margin-top: 10px;
         flex-wrap: wrap;
     }
     
@@ -369,7 +368,7 @@ a {
 }
 
 .main-section__img {
-    max-width: 400px;
+    max-width: 320px;
     height: auto;
 }
 
@@ -410,17 +409,37 @@ a {
 }
 
 @media (min-width: 1120px) {
+    .main-section {
+        margin-left: 0px;
+        margin-top: 8px;
+    }
+
     .main-section__p-text {
-        margin-top: 16px;
+        margin-top: 8px;
+        height: auto;
+    }
+
+    .main-section__section-text:last-child {
+        padding-bottom: 0;
     }
 
     .main-section__img {
-        max-width: 535px;
+        max-width: 530px;
         height: 307px;
     }
 
     .main-section__wrapper-text {
         margin-left: 34px;
+        margin-right: 34px;
+    }
+
+    .main-section__section-text {
+        letter-spacing: 0.2px;
+        line-height: 20px;
+    }
+
+    .main-section__more-btn {
+        margin-top: 14px;
     }
 }
 
@@ -429,11 +448,11 @@ a {
 
 .main-section__more-btn {
     display: flex;
-    width: 132px;
+    width: 125px;
     justify-content: space-between;
     align-items: center;
     background-color: inherit;
-    margin-left: 16px;
+    margin-left: 8px;
     margin-bottom: 16px;
     font-size: 16px;
     font-weight: 500;
