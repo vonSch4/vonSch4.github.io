@@ -297,6 +297,10 @@ a {
     overflow-x: auto;
 }
 
+.slide-menu::-webkit-scrollbar {
+    display: none;
+}
+
 .slide-menu--position {
     margin-top: 24px;
     margin-left: 16px;
@@ -373,6 +377,10 @@ a {
 }
 
 @media (min-width: 768px) {
+    .main-section {
+        margin-left: 24px;
+    }
+
     .main-section__wrapper {
         display: flex;
         flex-wrap: nowrap;
