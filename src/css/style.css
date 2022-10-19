@@ -394,6 +394,8 @@ ul {
     align-self: center;
 }
 
+/* Изменения в section при 768px */
+
 @media (min-width: 768px) {
     .section-wrapper {
         flex-direction: row;
@@ -428,6 +430,8 @@ ul {
         margin-top: 10px;
     }
 }
+
+/* Изменения в section при 1120px */
 
 @media (min-width: 1120px) {
     .section-wrapper__container {
