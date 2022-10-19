@@ -4,74 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="fonts/TTLakes/stylesheet.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="assets/fonts/TTLakes/stylesheet.css">
     <title>Макет</title>
 </head>
 <body>
     <header class="header">
-        <div class="header-container header-container--position">
-            <nav class="menu-1 menu-1--header-position">
-                <button class="header-btn menu-1__btn-menu" type="button"></button>
-            </nav>
-            <div class="logo logo--position">
-                <a href="#" class="logo__link">
-                    <img class="logo__link-img" src="pictures/logo.svg" alt="logo">
-                </a>
-            </div>
-            <nav class="menu-3 menu-3--position" hidden>
-                <button class="header-btn menu-3__btn-call" type="button"></button>
-                <button class="header-btn menu-3__btn-chat" type="button"></button>
-                <button class="header-btn menu-3__btn-profile" type="button"></button>
-            </nav>
-            <nav class="menu-2 menu-2--header-position">
-                <button class="header-btn menu-2__btn-repair" type="button"></button>
-                <button class="header-btn menu-2__btn-checkstatus" type="button"></button>
-            </nav>
+        <div class="header-container">
+            <button class="header-btn header__burger" type="button"></button>
+            <a href="#" class="logo-link">
+                <img class="logo-link__img" src="assets/icons/logo.svg" alt="logo">
+            </a>
+            <ul class="header-menu">
+                <li class="header-menu__item" hidden>
+                    <button class="header-btn header-menu__call" type="button"></button>
+                </li>
+                <li class="header-menu__item" hidden>
+                    <button class="header-btn header-menu__chat" type="button"></button>
+                </li>
+                <li class="header-menu__item" hidden>
+                    <button class="header-btn header-menu__profile" type="button"></button>
+                </li>
+                <li class="header-menu__item">
+                    <button class="header-btn header-menu__repair" type="button"></button>
+                </li>
+                <li class="header-menu__item">
+                    <button class="header-btn header-menu__checkstatus" type="button"></button>
+                </li>
+            </ul>
         </div>
     </header>
     <main class="main">
-        <div class="main-container main-container--position">
+        <div class="main-container">
             <div class="main-header-wrapper">
-                <h1 class="main-container__title main-container__title--position">
+                <h1 class="main-header__title">
                     Услуги и сервисы
                 </h1>
-                <nav class="menu-2 menu-2--main-position" hidden>
-                    <label class="label-menu-2" hidden>
-                        <span class="header-btn__text">Оставить заявку</span>
-                        <button class="header-btn menu-2__btn-repair" type="button"></button>
-                    </label>
-                    <label class="label-menu-2" hidden>
-                        <span class="header-btn__text">Статус ремонта</span>
-                        <button class="header-btn menu-2__btn-checkstatus" type="button"></button>
-                    </label>
-                    
-                </nav>
+                <div class="main-menu" hidden>
+                    <button class="main-menu__repair" type="button">
+                        <span class="main-menu__btn-text">Оставить заявку</span>
+                        <img class="main-menu__btn-img" src="/assets/icons/repait_main-menu.svg" alt="">
+                    </button>
+                    <button class="main-menu__checkstatus" type="button">
+                        <span class="main-menu__btn-text">Статус ремонта</span>
+                        <img class="main-menu__btn-img" src="/assets/icons/checkstatus_main-menu.svg" alt="">
+                    </button>
+                </div>
             </div>
-            <ul class="slide-menu slide-menu--position">
-                <li class="slide-menu__item"><a class="slide-menu__link slide-menu__item--active" href="#">Ремонтируемые бренды</a></li>
-                <li class="slide-menu__item"><a class="slide-menu__link" href="#">Дополнительные услуги</a></li>
-                <li class="slide-menu__item"><a class="slide-menu__link" href="#">Цены на услуги</a></li>
-                <li class="slide-menu__item"><a class="slide-menu__link" href="#">Адреса сервисных центров</a></li>
-                <li class="slide-menu__item"><a class="slide-menu__link" href="#">Специальные цены</a></li>
-                <li class="slide-menu__item"><a class="slide-menu__link" href="#">Отзывы</a></li>
-            </ul>
-            <section class="main-section">
-                <div class="main-section__wrapper">
-                    <div class="main-section__wrapper-text">
-                        <div class="main-section__p-text">
-                            <p class="main-section__section-text">
-                                Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной 
+            <nav class="slide-menu">
+                <a class="slide-menu__link slide-menu__link--active" href="#">Ремонтируемые бренды</a>
+                <a class="slide-menu__link" href="#">Дополнительные услуги</a>
+                <a class="slide-menu__link" href="#">Цены на услуги</a>
+                <a class="slide-menu__link" href="#">Адреса сервисных центров</a>
+                <a class="slide-menu__link" href="#">Специальные цены</a>
+                <a class="slide-menu__link" href="#">Отзывы</a>
+            </nav>
+            <section class="section">
+                <div class="section-wrapper">
+                    <div class="section-wrapper__container">
+                        <div class="section-wrapper__container-text">
+                            <p class="section-wrapper__text">
+                                Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете 
+                                отремонтировать свой ноутбук Dell с официальной 
                                 гарантией производителя.
                             </p>
-                            <p class="main-section__section-text" hidden>
-                                Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся 
+                            <p class="section-wrapper__text" hidden>
+                                Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает 
+                                большое количество постоянных клиентов. Мы гордимся 
                                 тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
                             </p>
                         </div>
-                        <button class="main-section__more-btn"><img class="main-section__btn-img" src="/pictures/read_more.svg" alt="">Читать далее</button>
+                        <button class="section-wrapper__read-more">
+                            <img class="section-wrapper__btn-img" src="/assets/icons/read_more.svg" alt="">
+                            <span class="section-wrapper__btn-text">Читать далее</span>
+                        </button>
                     </div>
-                    <img class="main-section__img" src="pictures/MG_3223.png" alt="">
+                    <img class="section-wrapper__img" src="assets/img/MG_3223.png" alt="">
                 </div>
             </section>            
         </div>
