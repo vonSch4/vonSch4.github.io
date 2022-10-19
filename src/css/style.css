@@ -411,13 +411,21 @@ ul {
     }
 
     .section-wrapper__container-text {
-        max-height: 145px;
+        max-height: 160px;
         overflow-y: hidden;
+    }
+
+    .section-wrapper__text {
+        line-height: 20px;
     }
 
     .section-wrapper__text:nth-child(n + 2) {
         display: block;
         margin-top: 20px;
+    }
+
+    .section-wrapper__read-more {
+        margin-top: 10px;
     }
 }
 
@@ -431,5 +439,9 @@ ul {
         margin: 7px 25px 0 0;
         align-self: flex-start;
         border-radius: 6px;
+    }
+
+    .section-wrapper__read-more {
+        margin-top: 15px;
     }
 }
