@@ -106,7 +106,7 @@ ul {
 
 
 /* Кнопки в меню header */
-/* Общие стили для кнопок */
+/* Общие стили для кнопок в header */
 
 .header-btn {
     width: 40px;
@@ -121,7 +121,7 @@ ul {
     transform: scale(1.2);
 }
 
-/* Персональные стили для кнопок */
+/* Персональные стили для кнопок в header */
 
 .header__burger {
     background-image: url('/assets/icons/burger_menu.svg');
