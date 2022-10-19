@@ -375,13 +375,13 @@ ul {
     margin-top: 16px;
 }
 
-.section-wrapper__btn-img {
+.section-wrapper__read-more-img {
     width: 8px;
     height: 10px;
     margin-right: 16px;
 }
 
-.section-wrapper__btn-text {
+.section-wrapper__read-more-text {
     font-size: 16px;
     font-weight: 500;
 }
