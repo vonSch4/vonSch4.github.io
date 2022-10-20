@@ -10,7 +10,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="header-container">
+        <div class="header__container">
             <button class="header-btn header__burger" type="button"></button>
             <a href="#" class="logo-link">
                 <img class="logo-link__img" src="assets/icons/logo.svg" alt="logo">
@@ -35,29 +35,45 @@
         </div>
     </header>
     <main class="main">
-        <div class="main-container">
-            <div class="main-header-wrapper">
-                <h1 class="main-header__title">
+        <div class="main__container">
+            <div class="main__header-wrapper">
+                <h1 class="main__header-title">
                     Услуги и сервисы
                 </h1>
                 <div class="main-menu" hidden>
-                    <button class="main-menu__repair" type="button">
-                        <span class="main-menu__btn-text">Оставить заявку</span>
-                        <img class="main-menu__btn-img" src="/assets/icons/repait_main-menu.svg" alt="">
-                    </button>
-                    <button class="main-menu__checkstatus" type="button">
-                        <span class="main-menu__btn-text">Статус ремонта</span>
-                        <img class="main-menu__btn-img" src="/assets/icons/checkstatus_main-menu.svg" alt="">
-                    </button>
+                    <div class="main-menu__wrapper">
+                        <button class="main-menu__repair" type="button">
+                            <span class="main-menu__btn-text">Оставить заявку</span>
+                            <img class="main-menu__btn-img" src="/assets/icons/repait_main-menu.svg" alt="">
+                        </button>
+                        <button class="main-menu__checkstatus" type="button">
+                            <span class="main-menu__btn-text">Статус ремонта</span>
+                            <img class="main-menu__btn-img" src="/assets/icons/checkstatus_main-menu.svg" alt="">
+                        </button>
+                    </div>
                 </div>
             </div>
             <nav class="slide-menu">
-                <a class="slide-menu__link slide-menu__link--active" href="#">Ремонтируемые бренды</a>
-                <a class="slide-menu__link" href="#">Дополнительные услуги</a>
-                <a class="slide-menu__link" href="#">Цены на услуги</a>
-                <a class="slide-menu__link" href="#">Адреса сервисных центров</a>
-                <a class="slide-menu__link" href="#">Специальные цены</a>
-                <a class="slide-menu__link" href="#">Отзывы</a>
+                <ul class="slide-menu__list">
+                    <li class="slide-menu__item">
+                        <a class="slide-menu__link slide-menu__link--active" href="#">Ремонтируемые бренды</a>
+                    </li>
+                    <li class="slide-menu__item">
+                        <a class="slide-menu__link" href="#">Дополнительные услуги</a>
+                    </li>
+                    <li class="slide-menu__item">
+                        <a class="slide-menu__link" href="#">Цены на услуги</a>
+                    </li>
+                    <li class="slide-menu__item">
+                        <a class="slide-menu__link" href="#">Адреса сервисных центров</a>
+                    </li>
+                    <li class="slide-menu__item">
+                        <a class="slide-menu__link" href="#">Специальные цены</a>
+                    </li>
+                    <li class="slide-menu__item">
+                        <a class="slide-menu__link" href="#">Отзывы</a>
+                    </li>
+                </ul>
             </nav>
             <section class="section">
                 <div class="section-wrapper">
