@@ -162,3 +162,14 @@ body {
 .lang-menu__item {
     margin-right: 10px;
 }
+
+.lang-menu__btn {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+
+.lang-menu__btn--active {
+    color: #7E7E82;
+}
