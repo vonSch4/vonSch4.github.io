@@ -23,6 +23,7 @@ body {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 ul {
@@ -87,28 +88,28 @@ ul {
 
 /*Header-menu*/
 
-.header-menu {
+.menu {
     display: flex;
     align-items: center;
 }
 
-.header-menu__item:nth-child(n + 4) {
+.menu__item:nth-child(n + 4) {
     display: flex;
     align-items: center;
 }
 
 @media (min-width: 768px) {
-    .header-menu__item:nth-child(-n + 3) {
+    .menu__item:nth-child(-n + 3) {
         display: flex;
         align-items: center;
     }
 }
 
 
-/* Кнопки в меню header */
-/* Общие стили для кнопок в header */
+/* Кнопки menu */
+/* Общие стили для кнопок menu */
 
-.header-btn {
+.btn {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -116,12 +117,12 @@ ul {
     transition-duration: 0.2s;
 }
 
-.header-btn:hover {
+.btn:hover {
     background-color: #5b0284;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
-/* Персональные стили для кнопок в header */
+/* Персональные стили для кнопок menu */
 
 .header__burger {
     background-image: url('/assets/icons/burger_menu.svg');
@@ -137,14 +138,14 @@ ul {
     }
 }
 
-.header-menu__repair {
+.menu__repair {
     background-image: url('/assets/icons/repair.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 20px 20px;
 }
 
-.header-menu__checkstatus {
+.menu__checkstatus {
     background-image: url('/assets/icons/check_status.svg');
     background-position: center;
     background-repeat: no-repeat;
@@ -152,7 +153,7 @@ ul {
     margin-left: 16px;
 }
 
-.header-menu__call {
+.menu__call {
     background-image: url('/assets/icons/call.svg');
     background-position: center;
     background-repeat: no-repeat;
@@ -160,12 +161,12 @@ ul {
 }
 
 @media (min-width: 768px) {
-    .header-menu__call {
+    .menu__call {
         margin-right: 16px;
     }
 }
 
-.header-menu__chat {
+.menu__chat {
     background-image: url('/assets/icons/chat.svg');
     background-position: center;
     background-repeat: no-repeat;
@@ -173,12 +174,12 @@ ul {
 }
 
 @media (min-width: 768px) {
-    .header-menu__chat {
+    .menu__chat {
         margin-right: 16px;
     }
 }
 
-.header-menu__profile {
+.menu__profile {
     background-image: url('/assets/icons/profile.svg');
     background-position: center;
     background-repeat: no-repeat;
@@ -293,11 +294,11 @@ ul {
     }
 
     .main-menu__repair:hover .main-menu__btn-img {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 
     .main-menu__checkstatus:hover .main-menu__btn-img {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 }
 
@@ -422,7 +423,8 @@ ul {
     }
 
     .section__img {
-        max-width: 360px;
+        min-width: 360px;
+        max-width: 450px;
         margin: 32px 25px 0 0;
         align-self: flex-start;
         border-radius: 6px;
@@ -455,7 +457,8 @@ ul {
     }
 
     .section__img {
-        max-width: 530px;
+        min-width: 530px;
+        max-width: 650px;
         margin: 7px 25px 0 0;
         align-self: flex-start;
         border-radius: 6px;
