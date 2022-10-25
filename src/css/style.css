@@ -193,16 +193,16 @@ ul {
     margin-right: auto;
     display: flex;
     align-items: center;
-    transition: 0.2s;
 }
 
-.logo-link:hover {
+.logo-link__img:hover {
     transform: scale(1.1);
 }
 
 .logo-link__img {
     width: 97px;
     height: 51px;
+    transition: 0.2s;
 }
 
 
