@@ -66,7 +66,7 @@
 
 
     // следить за изменениями размера экрана
-    breakpoint.addListener(breakpointChecker);
+    breakpoint.addEventListener('resize', breakpointChecker);
 
     // начало
     breakpointChecker();
@@ -78,12 +78,12 @@ let showButton = document.querySelector('.brand-menu__show-all');
 let hideButton = document.querySelector('.brand-menu__hide');
 
 // меню брендов
-let showAllBrand = document.querySelector('.swiper__container');
+let showAllBrand = document.querySelector('.brand-menu__swiper');
 
 
 // открытие меню брендов
 showButton.addEventListener('click', function () {
-    showAllBrand.classList.add('swiper__container--open');
+    showAllBrand.classList.add('brand-menu__swiper--open');
     showButton.classList.add('brand-menu__show-all--hidden');
     hideButton.classList.remove('brand-menu__hide--hidden');
 });
@@ -91,7 +91,7 @@ showButton.addEventListener('click', function () {
 
 // закрытие меню брендов
 hideButton.addEventListener('click', function () {
-    showAllBrand.classList.remove('swiper__container--open');
+    showAllBrand.classList.remove('brand-menu__swiper--open');
     hideButton.classList.add('brand-menu__hide--hidden');
     showButton.classList.remove('brand-menu__show-all--hidden');
 })

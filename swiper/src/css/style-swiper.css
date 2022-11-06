@@ -2,27 +2,27 @@
     background-color: #F8F8F8;
 }
 
-.brand-menu__container {
+.brand-menu__wrapper {
     display: flex;
     flex-direction: column;
 }
 
 /* Стилизация заголовка swiper-header */
 
-.swiper-header {
+.brand-menu__header {
     border-top: 1px solid #D9FFF5;
     background-color: #FFF;
 }
 
-.swiper-header__title {
+.brand-menu__title {
     width: 95%;
     margin: 0 auto;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7E7E82;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 
@@ -65,7 +65,7 @@
 
 /* Стилизация кнопки со стрелкой btn-arrow*/
 
-.btn-arrow {
+.swiper-slide__btn-arrow {
     background-color: #FFF;
     box-shadow: inset 0 0 0 2px #FF3E79;
     background-image: url(/swiper/assets/icons/arrow.svg);
@@ -76,18 +76,18 @@
 
 /* swiper 320px */
 
-.swiper__container {
+.brand-menu__swiper {
     height: 110px;
 }
 
 .brand-menu__swiper-wrapper {
     width: 95%;
     margin: 0 auto;
-    padding-top: 25px;
+    margin-top: 25px;
     margin-bottom: 25px;
 }
 
-.swiper-slide {
+.brand-menu__swiper-slide {
     height: 70px;
 }
 
@@ -111,11 +111,11 @@
 /* swiper 768px */
 
 @media (min-width: 768px) {
-    .swiper__container {
+    .brand-menu__swiper {
         height: 160px;
     }
 
-    .swiper__container--open {
+    .brand-menu__swiper--open {
         height: auto;
     }
 
@@ -126,9 +126,9 @@
         row-gap: 16px;
     }
 
-    .swiper-slide {
+    .brand-menu__swiper-slide {
         display: flex;
-        min-width: 215px;
+        min-width: 225px;
         width: 31%;
     }
 
@@ -165,13 +165,9 @@
         row-gap: 16px;
     }
 
-    .swiper-slide {
+    .brand-menu__swiper-slide {
         min-width: 240px;
         width: 22.75%;
-    }
-
-    .swiper-slide__container {
-        width: 100%;
     }
 
 }
