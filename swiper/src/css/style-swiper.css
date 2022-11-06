@@ -111,10 +111,38 @@
 
     .brand-menu__swiper {
         max-height: 160px;
+        animation-name: brand-menu__swiper--close;
+        animation-duration: 0.5s;
+    }
+
+    @keyframes brand-menu__swiper--close {
+
+        0% {
+            max-height: 328px;
+        }
+
+        100% {
+            max-height: 160px;
+        }
+
+    }
+
+    @keyframes brand-menu__swiper--open {
+
+        0% {
+            max-height: 160px;
+        }
+
+        100% {
+            max-height: 328px;
+        }
+
     }
 
     .brand-menu__swiper--open {
         max-height: none;
+        animation-name: brand-menu__swiper--open;
+        animation-duration: 0.5s;
     }
 
     .swiper-wrapper {
