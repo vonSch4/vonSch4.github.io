@@ -5,7 +5,6 @@
     // точка останова, где swiper будет уничтожен
     const breakpoint = window.matchMedia( '(min-width: 768px)' );
 
-    // следите за экземплярами swiper, чтобы уничтожить их позже
     let mySwiper;
 
 
@@ -17,7 +16,7 @@
         // очистить старые экземпляры и встроенные стили, когда они доступны
         if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
 
-        // или ничего не делать
+        // и/или ничего не делать
         return;
 
         // в противном случае при экране < 768px
@@ -68,7 +67,6 @@
     // следить за изменениями размера экрана
     breakpoint.addEventListener('resize', breakpointChecker);
 
-    // начало
     breakpointChecker();
 
 })();
