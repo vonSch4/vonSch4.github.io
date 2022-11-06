@@ -77,7 +77,7 @@
 /* swiper 320px */
 
 .brand-menu__swiper {
-    height: 115px;
+    min-height: 115px;
     width: 95%;
     margin: 0 auto;
     margin-top: 25px;
@@ -110,11 +110,11 @@
 @media (min-width: 768px) {
 
     .brand-menu__swiper {
-        height: 160px;
+        max-height: 160px;
     }
 
     .brand-menu__swiper--open {
-        height: auto;
+        max-height: none;
     }
 
     .swiper-wrapper {
