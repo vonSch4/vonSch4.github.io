@@ -1,6 +1,6 @@
-(function() {
+'use strict';
 
-    'use strict';
+(function() {
 
     // точка останова, где swiper будет уничтожен
     const breakpoint = window.matchMedia( '(min-width: 768px)' );
@@ -56,7 +56,7 @@
 
             680: {
                 slidesPerView: 2.5,
-            }
+            },
         }
 
       });
@@ -92,4 +92,4 @@ hideButton.addEventListener('click', function () {
     showAllBrand.classList.remove('brand-menu__swiper--open');
     hideButton.classList.add('brand-menu__hide--hidden');
     showButton.classList.remove('brand-menu__show-all--hidden');
-})
+});
