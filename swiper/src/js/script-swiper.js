@@ -13,13 +13,13 @@
       // если экран > 768px
       if ( breakpoint.matches === true ) {
 
-        // очистить старые экземпляры и встроенные стили, когда они доступны
+        // очистить старые экземпляры и встроенные стили, если они доступны
         if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
 
         // и/или ничего не делать
         return;
 
-        // в противном случае при экране < 768px
+        // при экране < 768px
         } else if ( breakpoint.matches === false ) {
 
           // включить swiper
