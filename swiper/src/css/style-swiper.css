@@ -111,8 +111,7 @@
 
     .brand-menu__swiper {
         max-height: 160px;
-        animation-name: brand-menu__swiper--close;
-        animation-duration: 0.3s;
+        animation: brand-menu__swiper--close 0.3s;
     }
 
     @keyframes brand-menu__swiper--close {
@@ -141,8 +140,7 @@
 
     .brand-menu__swiper--open {
         max-height: none;
-        animation-name: brand-menu__swiper--open;
-        animation-duration: 0.3s;
+        animation: brand-menu__swiper--open 0.3s;
     }
 
     .swiper-wrapper {

@@ -65,7 +65,7 @@
 
 
     // следить за изменениями размера экрана
-    breakpoint.addEventListener('resize', breakpointChecker);
+    breakpoint.addEventListener('change', breakpointChecker);
 
     breakpointChecker();
 
