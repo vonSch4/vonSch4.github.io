@@ -2,31 +2,22 @@
 
 (function() {
 
-    // точка останова, где swiper будет уничтожен
-    const breakpoint = window.matchMedia( '(min-width: 768px)' );
-
+    const breakpoint = window.matchMedia('(min-width: 768px)');
     let mySwiper;
 
 
     const breakpointChecker = function() {
 
-      // если экран > 768px
-      if ( breakpoint.matches === true ) {
+      if (breakpoint.matches) {
 
-        // очистить старые экземпляры и встроенные стили, если они доступны
-        if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
+        if (mySwiper) mySwiper.destroy(true, true);
 
-        // и/или ничего не делать
-        return;
+        } else if (breakpoint.matches === false) {
 
-        // при экране < 768px
-        } else if ( breakpoint.matches === false ) {
-
-          // включить swiper
-          return enableSwiper();
+          enableSwiper();
 
         }
-  
+
     };
 
 
@@ -57,39 +48,44 @@
             680: {
                 slidesPerView: 2.5,
             },
-        }
+        },
 
       });
 
     };
 
 
-    // следить за изменениями размера экрана
     breakpoint.addEventListener('change', breakpointChecker);
-
     breakpointChecker();
 
 })();
 
-// кнопки показать/скрыть
-let showButton = document.querySelector('.brand-menu__show-all');
-let hideButton = document.querySelector('.brand-menu__hide');
 
-// меню брендов
+let showButton = document.querySelector('.brand-menu__show-all');
+let showButtonImg = showButton.querySelector('.brand-menu__show-img');
+let showButtonText = showButton.querySelector('.brand-menu__show-text');
+
 let showAllBrand = document.querySelector('.brand-menu__swiper');
 
-
-// открытие меню брендов
-showButton.addEventListener('click', function () {
-    showAllBrand.classList.add('brand-menu__swiper--open');
-    showButton.classList.add('brand-menu__show-all--hidden');
-    hideButton.classList.remove('brand-menu__hide--hidden');
-});
+let countClick = 0;
 
 
-// закрытие меню брендов
-hideButton.addEventListener('click', function () {
-    showAllBrand.classList.remove('brand-menu__swiper--open');
-    hideButton.classList.add('brand-menu__hide--hidden');
-    showButton.classList.remove('brand-menu__show-all--hidden');
+showButton.addEventListener('click', function() {
+
+    if (countClick % 2 === 0) {
+
+        showAllBrand.classList.add('brand-menu__swiper--open');
+        showButtonText.textContent = 'Скрыть';
+        showButtonImg.classList.add('brand-menu__show-img--rotate');
+
+    } else {
+
+        showAllBrand.classList.remove('brand-menu__swiper--open');
+        showButtonText.textContent = 'Показать все';
+        showButtonImg.classList.remove('brand-menu__show-img--rotate');
+
+    }
+
+    countClick++;
+
 });
