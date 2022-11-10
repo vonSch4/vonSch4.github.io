@@ -65,20 +65,21 @@ const showButtonText = showButton.querySelector('.brand-menu__show-text');
 
 const showAllBrand = document.querySelector('.brand-menu__swiper');
 
-let isClick = false;
-
 
 showButton.addEventListener('click', function() {
 
-    showAllBrand.classList.toggle('brand-menu__swiper--open');
-    showButtonImg.classList.toggle('brand-menu__show-img--rotate');
+    if (showAllBrand.classList.contains('brand-menu__swiper--open')) {
 
-    if (!isClick) {
-        showButtonText.textContent = 'Скрыть';
-        isClick = true;
-    } else {
+        showAllBrand.classList.toggle('brand-menu__swiper--open');
+        showButtonImg.classList.toggle('brand-menu__show-img--rotate');
         showButtonText.textContent = 'Показать все';
-        isClick = false;
+
+    } else {
+
+        showAllBrand.classList.toggle('brand-menu__swiper--open');
+        showButtonImg.classList.toggle('brand-menu__show-img--rotate');
+        showButtonText.textContent = 'Скрыть';
+
     }
 
 });
