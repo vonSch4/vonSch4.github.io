@@ -1,18 +1,18 @@
 'use strict';
 
-(function() {
+window.addEventListener('DOMContentLoaded', function() {
 
     const breakpoint = window.matchMedia('(min-width: 768px)');
     let mySwiper;
 
 
-    const breakpointChecker = function() {
+    const breakpointHandler = function() {
 
-      if (breakpoint.matches) {
+        if (breakpoint.matches) {
 
-        if (mySwiper) mySwiper.destroy(true, true);
+            if (mySwiper) mySwiper.destroy(true, true);
 
-        } else if (breakpoint.matches === false) {
+        } else {
 
           enableSwiper();
 
@@ -27,8 +27,6 @@
 
         spaceBetween: 16,
         slidesPerView: 1.15,
-
-        grabCursor: true,
 
         pagination: {
             el: '.swiper-pagination',
@@ -55,37 +53,32 @@
     };
 
 
-    breakpoint.addEventListener('change', breakpointChecker);
-    breakpointChecker();
+    breakpoint.addEventListener('change', breakpointHandler);
+    breakpointHandler();
 
-})();
+});
 
 
-let showButton = document.querySelector('.brand-menu__show-all');
-let showButtonImg = showButton.querySelector('.brand-menu__show-img');
-let showButtonText = showButton.querySelector('.brand-menu__show-text');
+const showButton = document.querySelector('.brand-menu__show-all');
+const showButtonImg = showButton.querySelector('.brand-menu__show-img');
+const showButtonText = showButton.querySelector('.brand-menu__show-text');
 
-let showAllBrand = document.querySelector('.brand-menu__swiper');
+const showAllBrand = document.querySelector('.brand-menu__swiper');
 
-let countClick = 0;
+let isClick = false;
 
 
 showButton.addEventListener('click', function() {
 
-    if (countClick % 2 === 0) {
+    showAllBrand.classList.toggle('brand-menu__swiper--open');
+    showButtonImg.classList.toggle('brand-menu__show-img--rotate');
 
-        showAllBrand.classList.add('brand-menu__swiper--open');
+    if (!isClick) {
         showButtonText.textContent = 'Скрыть';
-        showButtonImg.classList.add('brand-menu__show-img--rotate');
-
+        isClick = true;
     } else {
-
-        showAllBrand.classList.remove('brand-menu__swiper--open');
         showButtonText.textContent = 'Показать все';
-        showButtonImg.classList.remove('brand-menu__show-img--rotate');
-
+        isClick = false;
     }
-
-    countClick++;
 
 });
