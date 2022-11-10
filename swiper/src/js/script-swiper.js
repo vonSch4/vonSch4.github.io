@@ -70,14 +70,14 @@ showButton.addEventListener('click', function() {
 
     if (showAllBrand.classList.contains('brand-menu__swiper--open')) {
 
-        showAllBrand.classList.toggle('brand-menu__swiper--open');
-        showButtonImg.classList.toggle('brand-menu__show-img--rotate');
+        showAllBrand.classList.remove('brand-menu__swiper--open');
+        showButtonImg.classList.remove('brand-menu__show-img--rotate');
         showButtonText.textContent = 'Показать все';
 
     } else {
 
-        showAllBrand.classList.toggle('brand-menu__swiper--open');
-        showButtonImg.classList.toggle('brand-menu__show-img--rotate');
+        showAllBrand.classList.add('brand-menu__swiper--open');
+        showButtonImg.classList.add('brand-menu__show-img--rotate');
         showButtonText.textContent = 'Скрыть';
 
     }
