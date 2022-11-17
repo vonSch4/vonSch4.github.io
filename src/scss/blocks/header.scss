@@ -1,0 +1,106 @@
+/* Mobile */
+
+.header {
+  border-bottom: 1px solid $border-color;
+  background-color: $white;
+
+  &__container {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: 180px;
+      width: 2px;
+      height: 32px;
+      background-color: #eaeaea;
+      border-radius: 1px;
+    }
+  }
+
+  &__burger {
+    background-image: url('@/assets/icons/burger_menu.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 18px 16px;
+    margin-right: 17px;
+  }
+}
+
+.logo-link {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+
+  &__img {
+    width: 97px;
+    height: 51px;
+    transition: 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $btn-color;
+  transition-duration: 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+
+/* Tablet */
+
+@include tablet {
+  .header {
+    &__container {
+      &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 62px;
+        width: 2px;
+        height: 32px;
+        background-color: #eaeaea;
+        border-radius: 1px;
+      }
+
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        right: 118px;
+        width: 2px;
+        height: 32px;
+        background-color: #eaeaea;
+        border-radius: 1px;
+      }
+    }
+
+    &__burger {
+      margin-right: 42px;
+    }
+  }
+}
+
+
+/* Desktop */
+
+@include desktop {
+  .header {
+    display: none;
+  }
+}

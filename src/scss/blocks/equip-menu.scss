@@ -1,0 +1,134 @@
+/* Mobile */
+
+.equip-menu {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    width: 100vw;
+    border-top: 1px solid $border-color;
+    background-color: $white;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $menu-text-color;
+    margin-left: -5.4%;
+    padding: 15px 5.4%;
+  }
+
+  &__swiper {
+    min-height: 205px;
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  &__swiper-slide {
+    height: 160px;
+  }
+
+  &__equip-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+    border-radius: 6px;
+    box-shadow: inset 0 0 0 1px #EAEAEA;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #d0d0d0;
+    }
+  }
+
+  &__equip-text {
+    align-self: flex-start;
+    margin-top: 15px;
+  }
+
+  &__arrow {
+    width: 40px;
+    height: 40px;
+    align-self: flex-end;
+    margin-bottom: 15px;
+  }
+
+  &__slide-container {
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    display: flex;
+  }
+}
+
+
+/* Animation */
+
+@keyframes equip-menu__swiper--close {
+  0% {
+    max-height: 336px;
+  }
+
+  100% {
+    max-height: 160px;
+  }
+}
+
+@keyframes equip-menu__swiper--open {
+  0% {
+    max-height: 160px;
+  }
+
+  100% {
+    max-height: 336px;
+  }
+}
+
+
+/* Tablet */
+
+@include tablet {
+  .equip-menu {
+    &__swiper {
+      margin-bottom: 25px;
+      min-height: auto;
+      max-height: 160px;
+      animation: equip-menu__swiper--close 0.3s;
+
+      &--open {
+        max-height: none;
+        animation: equip-menu__swiper--open 0.3s;
+      }
+    }
+
+    &__swiper-slide {
+      display: flex;
+      min-width: 210px;
+      width: 31.5%;
+    }
+
+    &__show-img--rotate {
+      transform-origin: center;
+      transform: rotate(180deg);
+    }
+
+  }
+}
+
+@include desktop {
+  .equip-menu {
+    &__title {
+      width: 105%;
+      margin-left: -2.5%;
+      padding: 15px 2.5%;
+    }
+
+    &__swiper-slide {
+      min-width: 230px;
+      width: 23.5%;
+    }
+  }
+}
