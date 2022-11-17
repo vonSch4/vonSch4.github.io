@@ -1,0 +1,47 @@
+/* Desktop */
+
+.repair-menu {
+  @include desktop {
+    display: flex;
+    align-items: center;
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    &__btn-repair {
+      display: flex;
+      align-items: center;
+      transition-duration: 0.2s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &__btn-checkstatus {
+      display: flex;
+      align-items: center;
+      margin-left: 30px;
+      transition-duration: 0.2s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &__btn-text {
+      font-family: $lakes-medium;
+      font-size: 16px;
+    }
+
+    &__btn-img {
+      width: 40px;
+      height: 40px;
+      background-color: $btn-color;
+      border-radius: 50%;
+      margin-left: 20px;
+    }
+  }
+}

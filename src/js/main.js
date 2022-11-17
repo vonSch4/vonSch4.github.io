@@ -1,0 +1,14 @@
+import '../../node_modules/focus-visible/dist/focus-visible';
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
+import '@/scss/style.scss';
+import '@/index.html';
+import './swiper.js';
+import './btn-brand.js';
+import './btn-equip.js';
+import './btn-text.js';
+import './active-link.js';
+import './aside.js';
+import './modal-callback.js';
+import './modal-feedback.js';

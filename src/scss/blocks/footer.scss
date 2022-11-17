@@ -1,0 +1,58 @@
+/* Mobile */
+
+.footer {
+    border-top: 1px solid $border-color;
+
+
+    &__wrapper {
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 16px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        font-size: 14px;
+        color: $menu-text-color;
+        text-align: center;
+    }
+
+    &__copyright {
+        margin-bottom: 16px;
+    }
+
+    &__privacy-policy {
+        margin-bottom: 16px;
+    }
+
+    &__info {
+        margin-bottom: 16px;
+    }
+}
+
+
+/* Tablet */
+
+@include tablet {
+    .footer {
+        &__wrapper {
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__copyright {
+            width: 30%;
+            text-align: left;
+        }
+
+        &__privacy-policy {
+            width: 30%;
+            text-align: center;
+        }
+
+        &__info {
+            width: 30%;
+            text-align: right;
+        }
+    }
+}

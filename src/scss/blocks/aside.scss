@@ -1,0 +1,276 @@
+/* Mobile */
+
+.aside {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  background-color: $background;
+  transform: translateX(-100%);
+  visibility: hidden;
+  width: 100%;
+  min-width: 320px;
+  max-width: 360px;
+  box-shadow: 16px 0px 40px rgba(14, 24, 80, 0.3);
+  transition: transform 0.2s ease-in-out,
+    visibility 0.2s ease-in-out;
+
+  &--open {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  &__container {
+    width: 90%;
+    min-height: 675px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    min-height: 88px;
+    margin-bottom: 10px;
+  }
+
+  &__close {
+    margin-right: 17px;
+    background-image: url(@/assets/icons/close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+  }
+
+  &__search {
+    background-image: url(@/assets/icons/search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 17px 17px;
+  }
+
+  &__nav {
+    margin-bottom: auto;
+  }
+
+  .menu__btn-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu__btn-call {
+    margin-right: 16px;
+  }
+
+  .menu__btn-chat {
+    margin-right: 16px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  &__email {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin-bottom: 10px;
+  }
+
+  &__tel {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    margin-bottom: 10px;
+  }
+
+  &__lang-menu {
+    margin-bottom: 20px;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    padding: 4px 0;
+    background-color: transparent;
+    font-family: $lakes-medium;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    transition: 0.1s ease-in-out;
+
+    &:hover {
+      transform: translate(5px);
+      color: $menu-text-color;
+    }
+
+    &--active {
+      color: #7E7E82;
+
+      &:hover {
+        transform: none;
+        opacity: 1;
+        color: #092e6f;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -5.5%;
+        width: 4px;
+        height: 32px;
+        background-color: #41F6D7;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+    }
+  }
+}
+
+.lang-menu {
+  display: flex;
+
+  &__radio {
+    margin-right: 10px;
+  }
+
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+  }
+
+  &__input:focus~&__text {
+    box-shadow: 0 0 0 1.5px black;
+    border-radius: 3px;
+  }
+
+  &__input:checked~&__text {
+    color: #7E7E82;
+  }
+}
+
+.overlay-aside {
+  display: none;
+  background-color: rgba(204, 204, 204, 0.5);
+  z-index: 1;
+  position: fixed;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+
+  &--open {
+    display: block;
+  }
+}
+
+.blur {
+  filter: blur(5px);
+  overflow-y: hidden;
+  max-height: 675px;
+  height: 100%;
+  transition: 0.2s ease-in-out;
+}
+
+
+/* Tablet */
+
+
+@include tablet {
+  .aside {
+    max-width: 320px;
+
+    &__container {
+      min-height: 940px;
+    }
+
+    &__header {
+      margin-bottom: 40px;
+    }
+
+    &__contact-info {
+      margin-top: 16px;
+    }
+
+    &__email {
+      margin-bottom: 12px;
+    }
+
+    &__tel {
+      margin-bottom: 40px;
+    }
+  }
+
+  .blur {
+    max-height: 940px;
+  }
+}
+
+
+/* Desktop */
+
+@include desktop {
+  body {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .aside {
+    position: static;
+    transform: none;
+    visibility: visible;
+    box-shadow: none;
+    background-color: $white;
+
+    &__header {
+      margin-top: 18px;
+    }
+
+    &__close {
+      display: none;
+    }
+  }
+
+  .content-wrapper {
+    min-width: 1048px;
+  }
+}

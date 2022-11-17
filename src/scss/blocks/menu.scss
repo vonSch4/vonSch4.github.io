@@ -1,0 +1,68 @@
+/* Mobile */
+
+.menu {
+  display: flex;
+  align-items: center;
+
+  &__item:nth-child(n + 4) {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn-repair {
+    background-image: url('@/assets/icons/repair.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+  }
+
+  &__btn-checkstatus {
+    background-image: url('@/assets/icons/check_status.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px 20px;
+    margin-left: 16px;
+  }
+
+  &__btn-call {
+    background-image: url('@/assets/icons/call.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+  }
+
+  &__btn-chat {
+    background-image: url('@/assets/icons/chat.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+  }
+
+  &__btn-profile {
+    background-image: url('@/assets/icons/profile.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 18px;
+    margin-right: 42px;
+  }
+}
+
+
+/* Tablet */
+
+@include tablet {
+  .menu {
+    &__item:nth-child(-n + 3) {
+      display: flex;
+      align-items: center;
+    }
+
+    &__btn-call {
+      margin-right: 16px;
+    }
+
+    &__btn-chat {
+      margin-right: 16px;
+    }
+  }
+}
