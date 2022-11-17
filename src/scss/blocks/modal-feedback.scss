@@ -11,7 +11,6 @@
   background-color: $white;
   width: 100%;
   max-width: 320px;
-  min-height: 675px;
 
   @include visually-hidden;
 
@@ -21,6 +20,8 @@
     width: 100%;
     max-width: 320px;
     min-height: 675px;
+    max-height: 940px;
+    height: 100vh;
     transform: translateX(0);
     visibility: visible;
     overflow: visible;
@@ -28,6 +29,9 @@
 
   &__container {
     width: 90%;
+    min-height: 675px;
+    max-height: 940px;
+    height: 100vh;
     margin: 0 auto;
     padding-top: 25px;
     display: flex;
