@@ -12,6 +12,9 @@ showBtnFeedback.addEventListener('click', () => {
   mainContentWrapper.classList.add('blur');
   overlayFeedback.classList.add('overlay-modal-feedback--open');
   aside.classList.add('blur');
+  setTimeout(() => {
+    showFeedback.focus();
+  }, 200);
 });
 
 showBtnFeedbackAside.addEventListener('click', () => {
@@ -21,6 +24,9 @@ showBtnFeedbackAside.addEventListener('click', () => {
   aside.classList.remove('aside--open');
   aside.classList.add('blur');
   overlayAside.classList.remove('overlay-aside--open');
+  setTimeout(() => {
+    showFeedback.focus();
+  }, 200);
 });
 
 closeBtnFeedback.addEventListener('click', () => {
@@ -28,6 +34,7 @@ closeBtnFeedback.addEventListener('click', () => {
   mainContentWrapper.classList.remove('blur');
   overlayFeedback.classList.remove('overlay-modal-feedback--open');
   aside.classList.remove('blur');
+  mainContentWrapper.focus();
 });
 
 overlayFeedback.addEventListener('click', () => {
@@ -35,4 +42,5 @@ overlayFeedback.addEventListener('click', () => {
   mainContentWrapper.classList.remove('blur');
   overlayFeedback.classList.remove('overlay-modal-feedback--open');
   aside.classList.remove('blur');
+  mainContentWrapper.focus();
 });

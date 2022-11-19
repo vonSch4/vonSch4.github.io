@@ -5,13 +5,10 @@ const showBtnEquipText = showBtnEquip.querySelector('.equip-menu__show-text');
 const showAllEquip = document.querySelector('.equip-menu__swiper');
 
 showBtnEquip.addEventListener('click', () => {
-  if (showAllEquip.classList.contains('equip-menu__swiper--open')) {
-    showAllEquip.classList.remove('equip-menu__swiper--open');
-    showBtnEquipImg.classList.remove('equip-menu__show-img--rotate');
-    showBtnEquipText.textContent = 'Показать все';
-  } else {
-    showAllEquip.classList.add('equip-menu__swiper--open');
-    showBtnEquipImg.classList.add('equip-menu__show-img--rotate');
-    showBtnEquipText.textContent = 'Скрыть';
-  }
+  showAllEquip.classList.toggle('equip-menu__swiper--open');
+  showBtnEquipImg.classList.toggle('equip-menu__show-img--rotate');
+
+  showAllEquip.classList.contains('equip-menu__swiper--open')
+    ? (showBtnEquipText.textContent = 'Скрыть')
+    : (showBtnEquipText.textContent = 'Показать все');
 });

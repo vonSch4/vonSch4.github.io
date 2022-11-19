@@ -7,20 +7,25 @@ const overlayAside = document.querySelector('.overlay-aside');
 
 export { aside, mainContentWrapper, overlayAside };
 
+function asideHandler() {
+  aside.classList.toggle('aside--open');
+  mainContentWrapper.classList.toggle('blur');
+  overlayAside.classList.toggle('overlay-aside--open');
+}
+
 showBtnAside.addEventListener('click', () => {
-  aside.classList.add('aside--open');
-  mainContentWrapper.classList.add('blur');
-  overlayAside.classList.add('overlay-aside--open');
+  asideHandler();
+  setTimeout(() => {
+    aside.focus();
+  }, 200);
 });
 
 closeBtnAside.addEventListener('click', () => {
-  aside.classList.remove('aside--open');
-  mainContentWrapper.classList.remove('blur');
-  overlayAside.classList.remove('overlay-aside--open');
+  asideHandler();
+  mainContentWrapper.focus();
 });
 
 overlayAside.addEventListener('click', () => {
-  aside.classList.remove('aside--open');
-  mainContentWrapper.classList.remove('blur');
-  overlayAside.classList.remove('overlay-aside--open');
+  asideHandler();
+  mainContentWrapper.focus();
 });

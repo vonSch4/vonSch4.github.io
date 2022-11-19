@@ -5,6 +5,7 @@
   align-items: center;
   flex-wrap: nowrap;
   overflow-x: auto;
+  scrollbar-width: none;
 
   &::-webkit-scrollbar {
     display: none;
@@ -15,11 +16,13 @@
     display: flex;
     align-items: center;
     margin: 24px 0;
+    row-gap: 5px;
   }
 
   &__item {
     display: flex;
     align-items: center;
+    margin-right: 5px;
   }
 
   &__link {

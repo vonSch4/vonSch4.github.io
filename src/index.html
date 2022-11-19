@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div class="content-wrapper">
+  <div class="content-wrapper" tabindex="0">
     <header class="header">
       <div class="header__container">
         <button class="btn header__burger" type="button"></button>
@@ -352,6 +352,65 @@
               </div>
               <div class="swiper-pagination"></div>
             </div>
+            <table class="prices-menu__table" hidden>
+              <thead class="prices-menu__table-header">
+                <tr class="prices-menu__table-header-row">
+                  <th class="prices-menu__table-header-cell">Ремонтные услуги</th>
+                  <th class="prices-menu__table-header-cell">Цена</th>
+                  <th class="prices-menu__table-header-cell" colspan="2">Срок</th>
+                </tr>
+              </thead>
+              <tr class="prices-menu__table-row">
+                <td class="prices-menu__table-cell">Диагностика</td>
+                <td class="prices-menu__table-cell">Бесплатно</td>
+                <td class="prices-menu__table-cell">30 мин</td>
+                <td class="prices-menu__table-cell">
+                  <button class="prices-menu__order-btn" type="button">
+                    <img class="prices-menu__order-btn-img" src="./assets/icons/order-btn.svg" alt="">
+                  </button>
+                </td>
+              </tr>
+              <tr class="prices-menu__table-row">
+                <td class="prices-menu__table-cell">Замена дисплея</td>
+                <td class="prices-menu__table-cell">1 000 ₽</td>
+                <td class="prices-menu__table-cell">30-120 мин</td>
+                <td class="prices-menu__table-cell">
+                  <button class="prices-menu__order-btn" type="button">
+                    <img class="prices-menu__order-btn-img" src="./assets/icons/order-btn.svg" alt="">
+                  </button>
+                </td>
+              </tr>
+              <tr class="prices-menu__table-row">
+                <td class="prices-menu__table-cell">Замена полифонического динамика</td>
+                <td class="prices-menu__table-cell">1 000 ₽</td>
+                <td class="prices-menu__table-cell">30-120 мин</td>
+                <td class="prices-menu__table-cell">
+                  <button class="prices-menu__order-btn" type="button">
+                    <img class="prices-menu__order-btn-img" src="./assets/icons/order-btn.svg" alt="">
+                  </button>
+                </td>
+              </tr>
+              <tr class="prices-menu__table-row">
+                <td class="prices-menu__table-cell">Тестирование с выдачей технического заключения</td>
+                <td class="prices-menu__table-cell">1 000 ₽</td>
+                <td class="prices-menu__table-cell">30-120 мин</td>
+                <td class="prices-menu__table-cell">
+                  <button class="prices-menu__order-btn" type="button">
+                    <img class="prices-menu__order-btn-img" src="./assets/icons/order-btn.svg" alt="">
+                  </button>
+                </td>
+              </tr>
+              <tr class="prices-menu__table-row">
+                <td class="prices-menu__table-cell">Замена программного обеспечения</td>
+                <td class="prices-menu__table-cell">1 000 ₽</td>
+                <td class="prices-menu__table-cell">30-120 мин</td>
+                <td class="prices-menu__table-cell">
+                  <button class="prices-menu__order-btn" type="button">
+                    <img class="prices-menu__order-btn-img" src="./assets/icons/order-btn.svg" alt="">
+                  </button>
+                </td>
+              </tr>
+            </table>
             <div class="prices-menu__offer">
               <p class="prices-menu__text">
                 Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения
@@ -375,7 +434,7 @@
       </div>
     </footer>
   </div>
-  <aside class="aside">
+  <aside class="aside" tabindex="0">
     <div class="aside__container">
       <div class="aside__header">
         <button class="btn aside__close" type="button"></button>
@@ -445,7 +504,7 @@
       </div>
     </div>
   </aside>
-  <div class="modal-feedback">
+  <div class="modal-feedback" tabindex="0">
     <div class="modal-feedback__container">
       <button class="btn modal-feedback__close"></button>
       <form class="modal-feedback__form" action="#" method="post">
@@ -473,7 +532,7 @@
       </form>
     </div>
   </div>
-  <div class="modal-callback">
+  <div class="modal-callback" tabindex="0">
     <div class="modal-callback__container">
       <button class="btn modal-callback__close"></button>
       <form class="modal-callback__form" action="#" method="post">

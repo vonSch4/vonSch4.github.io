@@ -3,31 +3,29 @@ const slideLinks = slideMenu.querySelectorAll('.slide-menu__link');
 let activeSlideLink = slideMenu.querySelector('.slide-menu__link--active');
 
 function addActiveLinkSlideHandler(link) {
-  link.addEventListener('click', (evt) => {
-    evt.preventDefault();
+  link.addEventListener('click', () => {
     activeSlideLink.classList.remove('slide-menu__link--active');
     activeSlideLink = link;
     link.classList.add('slide-menu__link--active');
   });
 }
 
-for (let i = 0; i < slideLinks.length; i++) {
-  addActiveLinkSlideHandler(slideLinks[i]);
-}
+slideLinks.forEach((link) => {
+  addActiveLinkSlideHandler(link);
+});
 
 const asideMenu = document.querySelector('.aside .nav__list');
 const asideLinks = asideMenu.querySelectorAll('.nav__link');
 let activeAsideLink = asideMenu.querySelector('.nav__link--active');
 
-function addActiveLinkAsideHandler(link) {
-  link.addEventListener('click', (evt) => {
-    evt.preventDefault();
+function addActiveLinkNavHandler(link) {
+  link.addEventListener('click', () => {
     activeAsideLink.classList.remove('nav__link--active');
     activeAsideLink = link;
     link.classList.add('nav__link--active');
   });
 }
 
-for (let i = 0; i < asideLinks.length; i++) {
-  addActiveLinkAsideHandler(asideLinks[i]);
-}
+asideLinks.forEach((link) => {
+  addActiveLinkNavHandler(link);
+});

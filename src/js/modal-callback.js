@@ -12,6 +12,9 @@ showBtnCallback.addEventListener('click', () => {
   mainContentWrapper.classList.add('blur');
   overlayCallback.classList.add('overlay-modal-callback--open');
   aside.classList.add('blur');
+  setTimeout(() => {
+    showCallback.focus();
+  }, 200);
 });
 
 showBtnCallbackAside.addEventListener('click', () => {
@@ -21,6 +24,9 @@ showBtnCallbackAside.addEventListener('click', () => {
   aside.classList.remove('aside--open');
   aside.classList.add('blur');
   overlayAside.classList.remove('overlay-aside--open');
+  setTimeout(() => {
+    showCallback.focus();
+  }, 200);
 });
 
 closeBtnCallback.addEventListener('click', () => {
@@ -28,6 +34,7 @@ closeBtnCallback.addEventListener('click', () => {
   mainContentWrapper.classList.remove('blur');
   overlayCallback.classList.remove('overlay-modal-callback--open');
   aside.classList.remove('blur');
+  mainContentWrapper.focus();
 });
 
 overlayCallback.addEventListener('click', () => {
@@ -35,4 +42,5 @@ overlayCallback.addEventListener('click', () => {
   mainContentWrapper.classList.remove('blur');
   overlayCallback.classList.remove('overlay-modal-callback--open');
   aside.classList.remove('blur');
+  mainContentWrapper.focus();
 });

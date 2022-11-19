@@ -33,8 +33,6 @@ function enableSwiper() {
           }
         }
       });
-    } else {
-      return;
     }
   });
 }
